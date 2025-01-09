@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support the Whelan/Kruk Family</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E76F51;
+            --background: #FAFAFA;
+            --text: #2B3044;
+            --text-light: #6B7280;
+            --accent: #2A9D8F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: var(--background);
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1.5rem 4rem;
+        }
+
+        .intro {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .support-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .support-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: white;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary);
+        }
+
+        .highlight {
+            background: #F3F4F6;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .highlight ul {
+            list-style: none;
+        }
+
+        .highlight li {
+            padding-left: 0;
+        }
+
+        .highlight li::before {
+            display: none;
+        }
+
+        .copy-button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            margin-left: auto;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .copy-button.copied {
+            background: var(--primary);
+            pointer-events: none;
+        }
+
+        .copy-button:hover {
+            background: var(--primary);
+        }
+
+        .copy-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0;
+            padding: 0.25rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .intro {
+                padding: 1.5rem;
+            }
+
+            .support-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <script>
+        function copyToClipboard(text, button) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="hero">
+        <img src="images/family.jpg" alt="Whelan/Kruk Family" class="hero-image">
+        <div class="hero-content">
+            <h1>Supporting the Whelan/Kruk Family</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="intro">
+
+                On January 8, 2025, the Eaton Fire in Altadena destroyed the home of Rachael and Brian Whelan.
+                Thankfully, they and their 6-week-old twins, Merle and Cal, escaped safely with only the clothes on
+                their backs and a toiletry bag. Your support during this challenging time means everything to them.
+
+        </div>
+
+        <div class="support-grid">
+            <div class="support-card">
+                <h2>Immediate Support</h2>
+                <p>The most impactful way to help right now is through direct financial assistance:</p>
+                <div class="highlight">
+                    <ul>
+                        <li>
+                            <div class="copy-wrapper">
+                                <strong>Zelle:</strong> 8327150268
+                                <button class="copy-button" onclick="copyToClipboard('8327150268', this)">Copy</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="copy-wrapper">
+                                <strong>Venmo:</strong> @Rachael-Kruk
+                                <button class="copy-button" onclick="copyToClipboard('@Rachael-Kruk', this)">Copy</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p>You can also contribute to their <a
+                        href="https://gofund.me/b276f724?fbclid=IwZXh0bgNhZW0CMTAAAR0BvAcz4LkM_CNup_HCQqfT7o4wMWzox1UaO3lUEkHoUAj6SrwAYJlgvyg_aem_5QJ2fPmSDGksQXkwkpLMOg"
+                        target="_blank">GoFundMe campaign</a></p>
+            </div>
+
+            <div class="support-card">
+                <h2>Help with Baby Essentials</h2>
+                <p>Support the twins through their <a
+                        href="https://www.amazon.com/hz/wishlist/ls/35M5QQFYC1I1D?ref_=wl_share" target="_blank">Amazon
+                        Wish List</a></p>
+                <p>Amazon gift cards of any amount are also greatly appreciated.</p>
+            </div>
+
+            <div class="support-card">
+                <h2>Clothing Support</h2>
+                <p>Help Rachael and Brian rebuild their wardrobe with gift cards from:</p>
+                <ul>
+                    <li><a href="https://factory.jcrew.com/help/gift-card?srsltid=AfmBOoo0U1epBMVJQcizDMFx-buKIoB-wcKd6nDQ9igXAMO_n28g8NRl"
+                            target="_blank">J.Crew</a></li>
+                    <li><a href="https://www.ae.com/ca/en/x/gift-cards?utm_campaign=nogender_general_general&utm_content=aerie&utm_medium=sem-intlbrand&utm_source=google&utm_term=american%20eagle%20and%20aerie"
+                            target="_blank">Aerie</a></li>
+                    <li><a href="https://www.ponchooutdoors.com/products/poncho-gift-card" target="_blank">Poncho</a>
+                    </li>
+                    <li><a href="https://www.perfectjeans.com/products/gift-card" target="_blank">The Perfect Jeans</a>
+                    </li>
+                </ul>
+                <p style="margin-top: 1.5rem;">Send gift cards to:</p>
+                <div class="highlight">
+                    <div class="copy-wrapper">
+                        <a href="mailto:rachaelkruk@gmail.com">rachaelkruk@gmail.com</a>
+                        <button class="copy-button" onclick="copyToClipboard('rachaelkruk@gmail.com', this)">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
